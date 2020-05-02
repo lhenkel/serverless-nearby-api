@@ -8,9 +8,9 @@ const port = process.env.PORT || 3001
 const bodyParser = require('body-parser')
 
 const AWS = require('aws-sdk')
-AWS.config.update({region: 'us-east-1'})
+AWS.config.update({ region: 'us-east-2' })
 
-const ddb = new AWS.DynamoDB() 
+const ddb = new AWS.DynamoDB()
 const ddbGeo = require('dynamodb-geo')
 
 const config = new ddbGeo.GeoDataManagerConfiguration(ddb, 'askJames-wheresStarbucks')
@@ -31,14 +31,14 @@ app.post('/', function (req, res) {
   myGeoTableManager.queryRadius({
     RadiusInMeter: SEARCH_RADIUS_METERS,
     CenterPoint: {
-        latitude: req.body.lat,
-        longitude: req.body.lng
+      latitude: req.body.lat,
+      longitude: req.body.lng
     }
   })
-  .then((locations) => {
-    console.log('Locations found: ', locations.length)
-    res.send(locations)
-  })  
+    .then((locations) => {
+      console.log('Locations found: ', locations.length)
+      res.send(locations)
+    })
 })
 
 // if running locally

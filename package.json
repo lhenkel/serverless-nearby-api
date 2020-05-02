@@ -1,6 +1,6 @@
 {
   "name": "geospatial",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,8 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "aws-sdk": "^2.424.0"
+    "aws-sdk": "^2.654.0",
+    "serverless-bundle": "^1.2.5",
+    "serverless-offline": "^5.3.3"
   }
 }

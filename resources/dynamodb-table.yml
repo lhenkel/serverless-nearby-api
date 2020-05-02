@@ -1,0 +1,29 @@
+Resources:
+  GeoTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.tableName}
+      AttributeDefinitions:
+        - AttributeName: hashKey
+          AttributeType: N
+        - AttributeName: rangeKey
+          AttributeType: S
+        - AttributeName: geohash
+          AttributeType: N
+      KeySchema:
+        - AttributeName: hashKey
+          KeyType: HASH
+        - AttributeName: rangeKey
+          KeyType: RANGE
+      LocalSecondaryIndexes:
+      - IndexName: geohash-index
+        KeySchema:
+        - AttributeName: hashKey
+          KeyType: HASH
+        - AttributeName: geohash
+          KeyType: RANGE
+        Projection:
+          ProjectionType: ALL
+
+      # Set the capacity to auto-scale
+      BillingMode: PAY_PER_REQUEST

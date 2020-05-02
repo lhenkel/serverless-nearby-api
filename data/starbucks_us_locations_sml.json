@@ -1,0 +1,117 @@
+[
+  {
+    "position": {
+      "lat": 61.21759217,
+      "lng": -149.8935557
+    },
+    "name": "Starbucks - AK - Anchorage  00001",
+    "address": "601 West Street_601 West 5th Avenue_Anchorage, Alaska 99501",
+    "phone": "907-277-2477"
+  },
+  {
+    "position": {
+      "lat": 61.19533942,
+      "lng": -149.9054948
+    },
+    "name": "Starbucks - AK - Anchorage  00002",
+    "address": "Carrs-Anchorage #1805_1650 W Northern Lights Blvd_Anchorage, Alaska 99503",
+    "phone": "907-339-0500"
+  },
+  {
+    "position": {
+      "lat": 61.2297,
+      "lng": -149.7522
+    },
+    "name": "Starbucks - AK - Anchorage  00003",
+    "address": "Elmendorf AFB_Bldg 5800 Westover Avenue_Anchorage, Alaska 99506"
+  },
+  {
+    "position": {
+      "lat": 61.19525062,
+      "lng": -149.8643361
+    },
+    "name": "Starbucks - AK - Anchorage  00004",
+    "address": "Fred Meyer - Anchorage #11_1000 E Northern Lights Blvd_Anchorage, Alaska 995084283",
+    "phone": "907-264-9600"
+  },
+  {
+    "position": {
+      "lat": 61.13751355,
+      "lng": -149.8379726
+    },
+    "name": "Starbucks - AK - Anchorage  00005",
+    "address": "Fred Meyer - Anchorage #656_2300 Abbott Road_Anchorage, Alaska 99507",
+    "phone": "907-365-2000"
+  },
+  {
+    "position": {
+      "lat": 61.13994658,
+      "lng": -149.9092788
+    },
+    "name": "Starbucks - AK - Anchorage  00006",
+    "address": "Fred Meyer - Anchorage (Dimond) #71_2000 W Dimond Blvd_Anchorage, Alaska 995151400",
+    "phone": "907-267-6700"
+  },
+  {
+    "position": {
+      "lat": 61.19533265,
+      "lng": -149.7364877
+    },
+    "name": "Starbucks - AK - Anchorage  00007",
+    "address": "Safeway-Anchorage #1817_7731 E Northern Lights Blvd_Anchorage, Alaska 99504",
+    "phone": "907-331-1700"
+  },
+  {
+    "position": {
+      "lat": 61.2156,
+      "lng": -149.8211
+    },
+    "name": "Starbucks - AK - Anchorage  00008",
+    "address": "Safeway - Anchorage #520_3101 PENLAND PKWY._Anchorage, Alaska 99508"
+  },
+  {
+    "position": {
+      "lat": 61.13806145,
+      "lng": -149.8445832
+    },
+    "name": "Starbucks - AK - Anchorage  00009",
+    "address": "Safeway-Anchorage #2628_1725 Abbott Rd_Anchorage, Alaska 99507",
+    "phone": "907-339-2800"
+  },
+  {
+    "position": {
+      "lat": 61.176693,
+      "lng": -149.9728678
+    },
+    "name": "Starbucks - AK - Anchorage [A]  00010",
+    "address": "ANC Anchorage_5000 W. Int'l Airport Rd._Anchorage, Alaska 99502",
+    "phone": "907-243-4331"
+  },
+  {
+    "position": {
+      "lat": 61.14473454,
+      "lng": -149.8638034
+    },
+    "name": "Starbucks - AK - Anchorage [D]  00011",
+    "address": "Old Seward & Dimond_1005 E Dimond Blvd_Anchorage, Alaska 99515",
+    "phone": "907-344-4160"
+  },
+  {
+    "position": {
+      "lat": 61.18081843,
+      "lng": -149.8359225
+    },
+    "name": "Starbucks - AK - Anchorage [D]  00012",
+    "address": "Tudor & Lake Otis- Anchorage_2421 East Tudor Road_Anchorage, Alaska 99507",
+    "phone": "907-561-1644"
+  },
+  {
+    "position": {
+      "lat": 61.180763,
+      "lng": -149.88695
+    },
+    "name": "Starbucks - AK - Anchorage [D]  00013",
+    "address": "Tudor Rd and C Street_110 W. Tudor Rd_Anchorage, Alaska 99503",
+    "phone": "907-561-3141"
+  }
+]
