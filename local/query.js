@@ -17,7 +17,7 @@ const myGeoTableManager = new ddbGeo.GeoDataManager(config)
       "lng": -149.8935557
 */
 myGeoTableManager.queryRadius({
-  RadiusInMeter: 1000,
+  RadiusInMeter: 5000,
   CenterPoint: {
     latitude: 61.21759217,
     longitude: -149.8935557
