@@ -14,11 +14,13 @@ custom:
   stage: ${opt:stage, self:provider.stage}
   # Set the table name here so we can use it while testing locally
   tableName: ${self:custom.stage}-nearby
+  queueName: ${self:custom.stage}-actions
 
 plugins:
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
-  - serverless-dotenv-plugin # Load .env as environment variables
+  - serverless-pseudo-parameters
+  #- serverless-dotenv-plugin # Load .env as environment variables
 
 provider:
   name: aws
@@ -27,6 +29,7 @@ provider:
   region: us-east-2
   environment:
     tableName: ${self:custom.tableName}  
+    queueName: ${self:custom.queueName}  
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -44,6 +47,17 @@ provider:
         - { "Fn::Join": [ "/", [ 
           { "Fn::GetAtt": ["GeoTable", "Arn" ] }, "index", "geohash-index" 
           ]]}
+    - Effect: Allow
+      Action:
+        - sqs:SendMessage
+        - "sqs:GetQueueUrl"
+      Resource:
+        - "Fn::GetAtt": [ FollowupQueue, Arn ]
+    - Effect: Allow
+      Action:
+        - "sqs:ListQueues"
+      Resource: "arn:aws:sqs:${self:provider.region}:#{AWS::AccountId}:*"      
+
 functions:
   # Defines an HTTP API endpoint that calls the main function in find.js
   # - path: url path is /find
@@ -59,6 +73,15 @@ functions:
           cors: true
           authorizer: aws_iam          
 
+  followup:
+    handler: addFollowup.main
+    events:
+      - http:
+          path: followup
+          method: post
+          cors: true
+          authorizer: aws_iam                    
+
 resources:
   # API Gateway Errors
   - ${file(resources/api-gateway-errors.yml)}
@@ -67,3 +90,5 @@ resources:
   # Cognito
   - ${file(resources/cognito-user-pool.yml)}
   - ${file(resources/cognito-identity-pool.yml)}
+  # Queue for followup actions
+  - ${file(resources/sqs-followups.yml)}
